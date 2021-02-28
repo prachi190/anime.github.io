@@ -1,0 +1,24 @@
+.anime__card {
+  position: relative;
+  display: inline-block; }
+  .anime__card:hover .anime__card__overlay {
+    opacity: 1; }
+  .anime__card-img {
+    height: 30rem;
+    position: relative;
+    display: block; }
+  .anime__card:hover .anime__card-img {
+    transform: scale(1.2);
+    filter: blur(0.5px);
+    -webkit-filter: blur(0.5px);
+    background-color: l; }
+  .anime__card__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease; }

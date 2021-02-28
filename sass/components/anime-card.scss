@@ -1,0 +1,106 @@
+.anime_card_parent {
+  display: inline-block;
+  padding: 0.8rem 0.5rem;
+}
+.anime__airing__top-10 {
+  &a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.anime__card {
+  // height: 100rem;
+  // padding: 2rem;
+  position: relative;
+
+  display: inline-block;
+  // width: 40rem;
+
+  &:hover &__overlay {
+    transform: scale(1.2);
+    opacity: 1;
+    z-index: 2;
+  }
+  &-img {
+    //   height: 50%;
+    height: 25rem;
+    width: 18rem;
+    @include respond(tab-port) {
+      height: 15rem;
+      width: 12rem;
+    }
+    // padding: 2rem;
+    position: relative;
+    display: block;
+    transition: all 0.5s ease;
+  }
+  &:hover &-img {
+    transform: scale(1.2);
+    filter: blur(0.5px);
+    -webkit-filter: blur(0.5px);
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  &:hover &__title {
+    opacity: 0;
+    // display: none;
+  }
+  &__box {
+    width: fit-content;
+    max-width: 100%;
+
+    display: table;
+  }
+  &__box img {
+    display: block;
+  }
+
+  &__title {
+    background-color: $color-secondry-dark;
+    padding: 0.2rem 0rem;
+    display: table-caption;
+    caption-side: bottom;
+    height: 5.5rem;
+    @include respond(tab-port) {
+      height: 9rem;
+    }
+    &__content {
+      color: $color-white;
+      text-align: center;
+      display: block;
+      overflow: hidden;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: transform 0.5s ease;
+    //   transition: 1s ease;
+
+    background-color: rgba($color-primary, 0.9);
+  }
+
+  &__overlay_content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    color: white;
+  }
+}
+
+.loadmore__popular__anime {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}

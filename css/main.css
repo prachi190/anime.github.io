@@ -1,0 +1,371 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+  background-color: #101213;
+  overflow-anchor: none; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0rem; } }
+
+::selection {
+  background-color: #1111;
+  color: #fff; }
+
+.header {
+  background-color: red;
+  background-image: linear-gradient(to right bottom, rgba(17, 17, 17, 0.8), rgba(0, 0, 0, 0.8)), url("https://pbs.twimg.com/media/EVP0f8iUwAIjf4w?format=jpg&name=4096x4096");
+  height: 70vh;
+  background-size: cover;
+  background-position: 50%; }
+
+.header__content-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center; }
+  @media (max-width: 56.25em) {
+    .header__content-box {
+      flex-direction: column;
+      padding: 10rem 4rem; } }
+
+.header__search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 5rem;
+  overflow: hidden; }
+  .header__search-box__search__btn {
+    text-align: center;
+    padding: 2rem; }
+  .header__search-box__search__button {
+    background-color: #b1060f;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    border-radius: 1rem;
+    transition: all 0.2s; }
+    @media (max-width: 56.25em) {
+      .header__search-box__search__button {
+        padding: 10px 30px; } }
+    .header__search-box__search__button:hover {
+      scale: 0.1;
+      background-color: #e50914; }
+
+.header__search-box__search__input {
+  font-family: inherit;
+  font-size: 2.5rem;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  margin-right: 10rem;
+  width: 150%;
+  color: #fff; }
+  @media (max-width: 56.25em) {
+    .header__search-box__search__input {
+      width: 100%; } }
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777; }
+
+.heading-primary {
+  display: block;
+  backface-visibility: hidden; }
+  .heading-primary--main {
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 6rem;
+    letter-spacing: 2rem;
+    text-align: center;
+    width: 100%;
+    animation-name: moveInLeft;
+    animation-duration: 1s; }
+    @media (max-width: 56.25em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 4rem;
+        padding: 1rem; } }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        font-size: 4rem;
+        padding: 2rem 0 1rem 0; } }
+  .heading-primary--sub {
+    display: block;
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    width: 100%;
+    text-align: center;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    margin-bottom: 7rem;
+    /* 
+         animation-timing-function: ease-in; -- fast in start then slow
+        animation-iteration-count: 3;-- work 3 times
+        animation-delay: 3s;-- start after 3sec
+        
+         */ }
+    @media (max-width: 56.25em) {
+      .heading-primary--sub {
+        padding: 1rem; } }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        padding: 2rem 0 1rem 0; } }
+
+.heading-secondary {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #55c57a, #000);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
+  letter-spacing: 2px; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      padding: 1rem;
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      padding: 1rem;
+      font-size: 2.5rem; } }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.heading__anime__main {
+  color: white;
+  border-bottom: 2px solid white;
+  margin-bottom: 1rem; }
+  .heading__anime__main__popular {
+    border: none; }
+    .heading__anime__main__popularh1 {
+      text-align: center; }
+
+.anime__search__result__loader {
+  display: flex;
+  justify-content: center;
+  height: 15rem; }
+
+.anime__search__result__loader__sleep {
+  display: none; }
+
+.anime_card_parent {
+  display: inline-block;
+  padding: 0.8rem 0.5rem; }
+
+.anime__airing__top-10a {
+  color: inherit;
+  text-decoration: none; }
+
+.anime__card {
+  position: relative;
+  display: inline-block; }
+  .anime__card:hover .anime__card__overlay {
+    transform: scale(1.2);
+    opacity: 1;
+    z-index: 2; }
+  .anime__card-img {
+    height: 25rem;
+    width: 18rem;
+    position: relative;
+    display: block;
+    transition: all 0.5s ease; }
+    @media (max-width: 56.25em) {
+      .anime__card-img {
+        height: 15rem;
+        width: 12rem; } }
+  .anime__card:hover .anime__card-img {
+    transform: scale(1.2);
+    filter: blur(0.5px);
+    -webkit-filter: blur(0.5px);
+    transition: all 0.5s ease;
+    z-index: 1; }
+  .anime__card:hover .anime__card__title {
+    opacity: 0; }
+  .anime__card__box {
+    width: fit-content;
+    max-width: 100%;
+    display: table; }
+  .anime__card__box img {
+    display: block; }
+  .anime__card__title {
+    background-color: #e50914;
+    padding: 0.2rem 0rem;
+    display: table-caption;
+    caption-side: bottom;
+    height: 5.5rem; }
+    @media (max-width: 56.25em) {
+      .anime__card__title {
+        height: 9rem; } }
+    .anime__card__title__content {
+      color: #fff;
+      text-align: center;
+      display: block;
+      overflow: hidden; }
+  .anime__card__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: transform 0.5s ease;
+    background-color: rgba(17, 17, 17, 0.9); }
+  .anime__card__overlay_content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    color: white; }
+
+.loadmore__popular__anime {
+  display: flex;
+  justify-content: center;
+  padding: 2rem; }
+
+.anime__airing__top-10 {
+  padding: 2rem; }
+
+.anime__search__result {
+  padding: 2rem; }
+
+.copyright {
+  padding: 4rem; }
+
+.legal {
+  text-align: center; }
+
+/* The Modal (background) */
+::-webkit-scrollbar {
+  width: 5px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 10px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e50914; }
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 3;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background: rgba(0, 0, 0, 0.7);
+  overflow: hidden; }
+
+/* Modal Content/Box */
+.modal-content {
+  overflow: hidden;
+  background-color: #101213;
+  margin: 2% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border-radius: 20px;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+  max-height: calc(100vh - 110px);
+  overflow-y: auto; }
+  .modal-content .details__modal {
+    color: #fff;
+    padding: 1rem 1.5rem; }
+    .modal-content .details__modal__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      padding-bottom: 2rem; }
+      .modal-content .details__modal__head-1__title {
+        padding: 2rem 0; }
+      .modal-content .details__modal__head-1__poster img {
+        max-height: 30rem; }
+      @media (max-width: 56.25em) {
+        .modal-content .details__modal__head-2 {
+          display: none; } }
+  .modal-content .iframe-container {
+    height: 100%;
+    padding: 0 0 0 1rem; }
+  .modal-content .iframe-container iframe {
+    height: 100%;
+    width: 85rem;
+    outline: none;
+    border: none; }
+  .modal-content .rrr {
+    display: inline-block; }
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold; }
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer; }

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="https://api.apiary.io/seeds/agent.js"></script>
+    <title>AniTime</title>
+  </head>
+  <body class="body">
+    <header class="header">
+      <!-- <div class="header__logo-box">
+        <img src="" alt="logo" class="header__logo" />
+      </div> -->
+      <div class="header__content-box">
+        <div class="header__text-box">
+          <h1 class="heading-primary">
+            <span class="heading-primary--main">AniTime</span>
+            <span class="heading-primary--sub">Anime Is Love</span>
+          </h1>
+        </div>
+
+        <div class="header__search-box">
+          <form action="" class="header__search-box__search">
+            <input
+              type="text"
+              id="search__id"
+              class="header__search-box__search__input"
+              placeholder="Search Anime"
+            />
+            <div class="header__search-box__search__btn">
+              <button class="header__search-box__search__button">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <section class="anime__search__result" id="demo">
+      <!-- <div class="anime__search__result__loader">
+        <img src="img/Cube.svg" alt="" srcset="" />
+      </div> -->
+
+      <!-- <div class="anime__search__result__heading">
+        <h1 class="heading-primary heading__anime__main">Search Results</h1>
+      </div> -->
+      <!-- <a href="#">
+        <div class="anime_card_parent">
+          <div class="anime__card card bg-dark text-white">
+            <div class="anime__card__box">
+              <img
+                src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg?s=faffcb677a5eacd17bf761edd78bfb3f"
+                class="anime__card-img"
+                alt="..."
+              />
+              <div class="anime__card__title">
+                <div class="anime__card__title__content">DEAD</div>
+              </div>
+            </div>
+            <div class="anime__card__overlay">
+              <div class="anime__card__overlay_content">
+                <div class="anime__card__overlay_content__title">
+                  <h3>Fullmetal Alchemist: Brotherhood</h3>
+                </div>
+                <div class="anime__card__overlay_content__score">
+                  <h3>9.21</h3>
+                </div>
+                <div class="anime__card__overlay_content__episodes">
+                  <h3>Episodes: 64</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a> -->
+    </section>
+
+    <section class="anime__airing__top-10">
+      <div
+        class="anime__airing__top-10__heading heading-primary heading__anime__main"
+      >
+        <h1>Top 10 Airing Anime</h1>
+      </div>
+
+      <!-- <a href="#">
+        <div class="anime_card_parent">
+          <div class="anime__card card bg-dark text-white">
+            <div class="anime__card__box">
+              <img
+                src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg?s=faffcb677a5eacd17bf761edd78bfb3f"
+                class="anime__card-img"
+                alt="..."
+              />
+              <div class="anime__card__title">
+                <div class="anime__card__title__content">DEAD</div>
+              </div>
+            </div>
+            <div class="anime__card__overlay">
+              <div class="anime__card__overlay_content">
+                <div class="anime__card__overlay_content__title">
+                  <h3>Fullmetal Alchemist: Brotherhood</h3>
+                </div>
+                <div class="anime__card__overlay_content__score">
+                  <h3>9.21</h3>
+                </div>
+                <div class="anime__card__overlay_content__episodes">
+                  <h3>Episodes: 64</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a> -->
+    </section>
+
+    <section class="anime__upcoming__top10">
+      <div
+        class="anime__upcoming__top-10__heading heading-primary heading__anime__main"
+      >
+        <h1>Top 10 Upcoming Anime</h1>
+      </div>
+    </section>
+
+    <section class="anime__movie__top10">
+      <div
+      class="anime__movie__top-10__heading heading-primary heading__anime__main"
+    >
+      <h1>Top 10 Anime Movies</h1>
+
+    </section>
+
+    <section class="anime__popular">
+      <div
+      class="anime__popular__heading heading-primary heading__anime__main heading__anime__main__popular"
+    >
+      <h1>Popular Anime</h1>
+
+    </section>
+    <div class="loadmore__popular__anime">
+      <button class="header__search-box__search__button   anime__loadmore__btn">Load More </button>
+
+    </div>
+
+
+    <!-- Trigger/Open The Modal -->
+    <!-- <button id="myBtn">Open Modal</button> -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <!-- <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <div class="details__modal">
+          <div class="details__modal__head-1__title">
+                 
+
+            <h3 class="heading-primary">
+              Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season Part 2
+            </h3>
+
+          </div>
+
+          <div class="details__modal__head">
+            
+            <div class="details__modal__head-1">
+              <div class="details__modal__head-1__poster">
+                <img src="https://cdn.myanimelist.net/images/anime/1499/109126.jpg?s=3ec42e73c322253066dc78b01d70a" alt="" srcset="">
+
+              </div>
+
+
+
+             
+              <div class="details__modal__head-1__rr">
+               
+                <div class="details__modal__head-1__rr__ranking">
+                 Rank:  46
+                </div>
+
+
+              </div>
+              
+
+              <div class="details__modal__head-1__genre">
+                <p>
+                  Genre:Psychological,Drama,Thriller,<br>Fantasy
+                </p>
+               
+
+              </div>
+
+
+
+
+            </div>
+            <div class="details__modal__head-2">
+              <div class="iframe-container">
+                <iframe
+                  scrolling="no"
+                  src=https://www.youtube.com/embed/6vMuWuWlW4I?enablejsapi=1&wmode=opaque&autoplay=1"
+                >
+                </iframe>
+              </div>
+
+            </div>
+          </div>
+
+       
+        
+        <div class="details__modal__synopsis">
+          <h2>Synopsis</h2>
+          <p>
+            Ever since the death of his father, the burden of supporting the family has fallen upon Tanjirou Kamado's shoulders. Though living impoverished on a remote mountain, the Kamado family are able to enjoy a relatively peaceful and happy life. One day, Tanjirou decides to go down to the local village to make a little money selling charcoal. On his way back, night falls, forcing Tanjirou to take shelter in the house of a strange man, who warns him of the existence of flesh-eating demons that lurk in the woods at night. When he finally arrives back home the next day, he is met with a horrifying sight—his whole family has been slaughtered. Worse still, the sole survivor is his sister Nezuko, who has been turned into a bloodthirsty demon. Consumed by rage and hatred, Tanjirou swears to avenge his family and stay by his only remaining sibling. Alongside the mysterious group calling themselves the Demon Slayer Corps, Tanjirou will do whatever it takes to slay the demons and protect the remnants of his beloved sister's humanity. [Written by MAL Rewrite] lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eaque sunt recusandae. Eum doloremque corrupti quasi autem saepe, nisi perferendis itaque neque voluptatibus, pariatur ea ipsa, cumque et totam quo.
+            
+          </p>
+
+        </div>
+      </div>
+
+      
+      </div> -->
+    </div>
+
+    <div class="cpoyright">
+      <div class="legal">
+        &copy; 2021 by Anubhav Bansal. All rights reserved.
+    </div>
+    </div>
+  </body>
+
+  <script type="module" src="js/controller.js"></script>
+</html>

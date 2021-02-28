@@ -1,0 +1,7 @@
+.anime__search__result__loader {
+  display: flex;
+  justify-content: center;
+  height: 15rem; }
+
+.anime__search__result__loader__sleep {
+  display: none; }

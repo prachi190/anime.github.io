@@ -1,0 +1,78 @@
+.header {
+  // height: 75vh;
+  background-color: red;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("https://pbs.twimg.com/media/EVP0f8iUwAIjf4w?format=jpg&name=4096x4096");
+  height: 70vh;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.header__content-box {
+  // padding: 15rem 5rem;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  @include respond(tab-port) {
+    flex-direction: column;
+    padding: 10rem 4rem;
+  }
+}
+
+.header__search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 5rem;
+  overflow: hidden;
+  //   flex: 0 0 40%;
+
+  &__search__btn {
+    text-align: center;
+    padding: 2rem;
+  }
+  &__search__button {
+    background-color: $color-secondry;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    // display: inline-block;
+    font-size: 2rem;
+    border-radius: 1rem;
+    transition: all 0.2s;
+    @include respond(tab-port) {
+      padding: 10px 30px;
+    }
+    &:hover {
+      scale: (0.1);
+      background-color: $color-secondry-dark;
+    }
+  }
+}
+
+.header__search-box__search__input {
+  font-family: inherit;
+  font-size: 2.5rem;
+  border: none;
+  outline: none;
+
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  margin-right: 10rem;
+  width: 150%;
+  color: #fff;
+
+  @include respond(tab-port) {
+    width: 100%;
+  }
+}
